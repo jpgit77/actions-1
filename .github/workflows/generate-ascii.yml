@@ -1,0 +1,25 @@
+name: ART IS COOL
+
+on: push
+
+jobs:
+    first_job:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout repo
+          uses: actions/checkout@v4
+
+        - name: Install Cowsay
+          run: sudo apt-get intsall cowsay -y
+        
+        - name: Cowsay command
+          run: cowsay -f dragon "Come now, don't be shy. Step into the light!!!" >> dragon.txt
+
+        - name: Test file exists
+          run: grep -i "dragon" dragon.txt
+
+        - name: List Repo Files
+          run: |
+            cat dragon.txt
+            ls -ltra
+            
