@@ -3,7 +3,7 @@ name: ART IS COOL
 on: push
 
 jobs:
-    first_job:
+    generate_ascii:
         runs-on: ubuntu-latest
         steps:
         - name: Checkout repo
