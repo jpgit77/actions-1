@@ -15,9 +15,6 @@ jobs:
         - name: Cowsay command
           run: cowsay -f dragon "Come now, don't be shy. Step into the light!!!" >> dragon.txt
 
-        - name: Test file exists
-          run: grep -i "dragon" dragon.txt
-
         - name: List Repo Files
           run: |
             cat dragon.txt
