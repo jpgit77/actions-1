@@ -9,14 +9,9 @@ jobs:
         - name: Checkout repo
           uses: actions/checkout@v4
 
-        - name: Install Cowsay
-          run: sudo apt install cowsay -y
-        
-        - name: Cowsay command
-          run: cowsay -f dragon "Come now, don't be shy. Step into the light!!!" >> dragon.txt
-
-        - name: List Repo Files
+        - name: Execute script
           run: |
-            cat dragon.txt
-            ls -ltra
+            chmod +x ascii-script.sh
+            ./ascii-script.sh
+        
             
