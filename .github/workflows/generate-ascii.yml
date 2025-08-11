@@ -9,6 +9,9 @@ jobs:
         - name: Checkout repo
           uses: actions/checkout@v4
 
+        - name: List files
+          run: ls -ltra
+
         - name: Execute script
           run: |
             chmod +x ./ascii-script.sh
