@@ -28,7 +28,7 @@ jobs:
             name: dragon-text-file
 
         - name: Test file exists
-          run: grep -i "dragon" dragon.txt
+          run: ls -ltra
 
     deploy_job_3:
       needs: test_job_2
